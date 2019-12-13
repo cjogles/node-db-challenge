@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/cjogles/node-db-challenge/issues"
   },
-  "homepage": "https://github.com/cjogles/node-db-challenge#readme"
+  "homepage": "https://github.com/cjogles/node-db-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.20.4",
+    "nodemon": "^2.0.2",
+    "sqlite3": "^4.1.1"
+  }
 }
