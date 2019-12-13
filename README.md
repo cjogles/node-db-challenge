@@ -38,13 +38,18 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [x] Explain the difference between `Relational Databases` and `SQL`.
+A relationsal database is a place where tables of data are stored where certain values called foreign keys interconnect other tables together in relationships. SQL is a search query language built to create queries for databases whether relational, non relational, graphical or otherwise.
 
-- [ ] Why do tables need a `primary key`?
+- [x] Why do tables need a `primary key`?
+A Primary key is used to provide a unique identifier for each record in a table. So in other words, primary keys provide row accessibility via a special column. 
 
-- [ ] What is the name given to a table column that references the primary key on another table.
+- [x] What is the name given to a table column that references the primary key on another table.
+Foreign Key
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+- [x] What do we need in order to have a _many to many_ relationship between two tables.
+A many-to-many relationship occurs when multiple records in a table are associated with multiple records in another table. For example, a many-to-many relationship 
+exists between customers and products: customers can purchase various products, and products can be purchased by many customers.
 
 ## Minimum Viable Product
 
