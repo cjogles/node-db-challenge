@@ -1,12 +1,13 @@
 const express = require('express');
 const projectDB = require('../data/models/projectModel');
-// // const middleware = require('../api/middleware');
+const taskDB = require('../data/models/taskModel');
+const resourceDB = require('../data/models/resourceModel');
+// const middleware = require('./middleware');
 
 const router = express.Router();
 
-//                                    GET PROJECTS
 router.get('/', (req, res) => {
-    projectDB.get()
+    resourceDB.get()
         .then(projects => {
             res.status(200).json(projects);
         })
@@ -15,10 +16,9 @@ router.get('/', (req, res) => {
         })
 })
 
-//                                      ADD PROJECT
 router.post('/', (req, res) => {
     const proj = req.body;
-    projectDB.addProject(proj)
+    resourceDB.addResource(proj)
         .then(project => {
             res.status(201).json({project});
         })

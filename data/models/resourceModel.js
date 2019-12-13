@@ -3,26 +3,24 @@ const db = require('../dbConfig.js');
 
 module.exports = {
   get,
-  addProject
+  addResource
 };
 
 function get() {
-  return db("projects");
+  return db("resources");
 }
 
 function findById(id) {
-  return db("projects")
+  return db("resources")
     .where({ id })
     .first();
 }
 
-function addProject(projectBody){
-  return db("projects")
-    .insert(projectBody, "id")
+function addResource(resourceBody){
+  return db("resources")
+    .insert(resourceBody, "id")
     .then(ids => {
       const [id] = ids;
       return findById(id);
     })
 }
-
-
