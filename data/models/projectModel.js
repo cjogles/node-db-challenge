@@ -6,7 +6,7 @@ module.exports = {
   insert,
   update,
   remove,
-  getProjectActions,
+  getProjectTasks,
 };
 
 function get(id) {
@@ -15,7 +15,7 @@ function get(id) {
   if (id) {
     query.where('p.id', id).first();
 
-    const promises = [query, this.getProjectActions(id)]; // [ projects, actions ]
+    const promises = [query, this.getProjectTasks(id)]; // [ projects, tasks ]
 
     return Promise.all(promises).then(function(results) {
       let [project, actions] = results;
@@ -54,8 +54,8 @@ function remove(id) {
     .del();
 }
 
-function getProjectActions(projectId) {
-  return db('actions')
+function getProjectTasks(projectId) {
+  return db('tasks')
     .where('project_id', projectId)
-    .then(actions => actions.map(action => mappers.actionToBody(action)));
+    .then(actions => actions.map(action => mappers.taskToBody(task)));
 }
